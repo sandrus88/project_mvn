@@ -24,7 +24,7 @@ Maven è anche un insieme di standard applicate a un progetto, una struttura di 
 ```
 
 ### Struttura del progetto nel filesystem
-La struttura semplice di un progetto Maven è la seguente.
+La struttura di un progetto semplice Maven è la seguente.
 ```
 my-app
 |-- pom.xml
@@ -43,9 +43,9 @@ my-app
                         -- AppTest.java
 ```                 
        
-* `src` struttura standard per un progetto Java
-* `main` codice sorgente del progetto
-* `test` codice sorgente dei test d’unità; 
+* `src` struttura standard per un progetto Java.
+* `main` codice sorgente del progetto.
+* `test` codice sorgente dei test d’unità.
 * `pom.xml` il cuore del progetto com tutte le nostre configurazioni.
                  
  
@@ -56,7 +56,7 @@ Maven definisce un ciclo di vita standard per il building, il test e il deployme
 * generazione dei pacchetti, jar o war, a partire dal codice binario
 * deployment dell’applicazione in ambiente di test o di produzione.
 
-Per fare questo Maven usa i `Goals`
+Per fare questo Maven usa i `Goals`.
 
 ### I plugins di Maven
 Maven non e' altro che un esecutore di plug-in, alcuni presenti di default e altri che si possono aggiungere all'occorrenza.
@@ -115,15 +115,19 @@ Oppure usando il `SYSTEM VARIABLES` del sistema operativo.
 
 
 ### Installare un progetto al Repository Locale
-Il
-`mvn clean compile install`
-- `mvn clean` cancella la cartella `target`
-- `mvn compile` Legge dal `pom.xml` le `dependencies` dichiarate e cerca di recuperarle prima dal repository locale. 
+
+- `mvn clean` - Cancella la cartella `target`
+- `mvn compile` - Legge dal `pom.xml` le `dependencies` dichiarate e cerca di recuperarle prima dal repository locale. 
 Se i `jar` richiesti non sono presenti localmente, Maven si collega al repository centrale sul web, e scarica i pacchetti nel repository locale.
 Poi compila i sorgenti creando una cartella `target` dove mette le i file `.class` generati.
-- `mvn package` Partendo dai file binari generati nel goal `compile` impachetta e crea un file `jar` o `war` che lo mette prima dentro la cartella `target`
-- `mvn install` Copia dalla cartella target il `jar` o `war` creato nel goal `package` e lo mette nel repository locale, precisamente nel percorso:
+- `mvn package` - Partendo dai file binari generati nel goal `compile` impachetta e crea un file `jar` o `war` che lo mette prima dentro la cartella `target`
+- `mvn install` - Copia dalla cartella target il `jar` o `war` creato nel goal `package` e lo mette nel repository locale, precisamente nel percorso:
 `C:/Users/nome_utente/.m2/repository/com/mycompany/my-app/1.0.0/my-app-1.0.0.jar`
+
+Il goal `install` implica l'esecuzione del goal `package`, il quale implica l'esecuzione di `compile`, per questo di solito si usa il seguente 
+commando composto per poter pulire e poi installare un progetto.
+- `mvn clean install`
+
 
 Perche':
 - `<groupId>com.mycompany</groupId>` rappresenta il nome del gruppo del progetto o di diversi progetti in comune fra di loro. 
