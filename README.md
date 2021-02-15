@@ -2,7 +2,14 @@
 
 ### Cosa e' Maven
 In sintesi Maven è un strumento che permette la *gestione delle dipendenze* e il *build automation* per i progetti Java.
-Maven è anche un insieme di standard applicate a un progetto, una struttura di repository e un‘applicazione che servono alla gestione e la descrizione di progetti software. 
+Maven è anche un insieme di standard applicate e una struttura di repository che serve per lo sviluppo. 
+In altre parole Maven e':
+
+- Gestione delle dipendenze
+- Repository 
+- Build automation
+- Progetto strutturato secondo uno standard
+
 
 ### Struttura progetto Maven
 
@@ -61,19 +68,18 @@ Per fare questo Maven usa i `Goals`.
 ### I plugins di Maven
 Maven non e' altro che un esecutore di plug-in, alcuni presenti di default e altri che si possono aggiungere all'occorrenza.
 
-
 ### I Goals
 Un `goal` e' lo specifico compito eseguito da un determinato plug-in. 
 Tra i vari `goals` quelli piu' importanti per il ciclo di vita del sviluppo sono:
-- `compile`: compila i sorgenti del progetto.
-- `test`: esegue i file test compilati usando uno specificabile framework per i test.
-- `package`: prende i file compilati ed esegue il package in un file JAR (o war,..ecc).
-- `install`: installare il package nel repository locale, da utilizzare come dipendenza in altri progetti in locale.
-- `deploy`: copia il pacchetto finale nel repository remoto per condividerlo con altri sviluppatori e progetti. 
-- `clean`: ripulisce gli artifact creati nelle precedenti esecuzioni.
+- `compile` compila i sorgenti del progetto.
+- `test` esegue i file test compilati usando uno specificabile framework per i test.
+- `package` prende i file compilati ed esegue il package in un file JAR (o war,..ecc).
+- `install` installare il package nel repository locale, da utilizzare come dipendenza in altri progetti in locale.
+- `deploy` copia il pacchetto finale nel repository remoto per condividerlo con altri sviluppatori e progetti. 
+- `clean` ripulisce gli artifact creati nelle precedenti esecuzioni.
+
 I `goal` possono essere eseguiti in catena, esempio:
 - `mn clean install`
- Se invoco un goal qualsiasi, vengono eseguiti tutti i goals precedenti fino a quello invocato.
 
 ### Installazione Maven 
 Installando Maven, significa estrare il file `.zip` nel filesystem. La struttura di Maven è la seguente:
@@ -137,6 +143,6 @@ Perche':
 
 
 ### See
-* [Cosa e' Maven](https://stackoverflow.com/questions/13335351/what-does-maven-do-in-theory-and-in-practice-when-is-it-worth-to-use-it) - Descrizione di Maven in teoria e in pratica
-* [Installazione e primo progetto](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) - Come si installa Maven e come potrebbe essere un primo progetto 
-* [Concetto di goals](https://www.baeldung.com/maven-goals-phases) - Descrizione dei goals di default di Maven
+* [Maven sito ufficiale](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) - Come si installa Maven e come potrebbe essere un primo progetto 
+* [Cosa e' Maven - Stackoverflow](https://stackoverflow.com/questions/13335351/what-does-maven-do-in-theory-and-in-practice-when-is-it-worth-to-use-it) - Descrizione di Maven in teoria e in pratica
+* [Goals in Maven](https://www.baeldung.com/maven-goals-phases) - Descrizione dei goals di default di Maven
