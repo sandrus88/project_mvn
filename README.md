@@ -53,16 +53,16 @@ my-app
                        
 * `src` struttura standard per un progetto Java.
 * `main` codice sorgente del progetto.
-* `test` codice sorgente dei test d’unità.
+* `test` codice sorgente dei unit test�.
 * `pom.xml` il cuore del progetto con tutte le nostre configurazioni.
                  
  
 ### Maven come build automation tool
 Maven definisce un ciclo di vita standard per il building, il test e il deployment di file di distribuzione Java.
 * compilazione del codice sorgente
-* esecuzione dei test di unità (ad esempio, tramite JUnit)
+* esecuzione dei unit test� (ad esempio, tramite JUnit)
 * generazione dei pacchetti, jar o war, a partire dal codice binario
-* deployment dell’applicazione in ambiente di test o di produzione.
+* deployment dell' applicazione in ambiente di test o di produzione.
 
 Per fare questo Maven usa i `Goals`.
 
@@ -102,7 +102,7 @@ MAVEN_HOME
 
 #### Maven settings.xml
 La configurazione del Maven viene fatta nel file `settings.xml` si possono configurare il repository locale, i repository remoti, proxy, servers, mirrors, etc.
-Per default il pecorso del repository locale si trova in `C:\Users\nome_utente\.m2\repository`, ma si può cambiare nell' elemento `<localRepository>`
+Per default il pecorso del repository locale si trova in `C:\Users\nome_utente\.m2\repository`, ma si puo' cambiare nell' elemento `<localRepository>`
 
 ```
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
