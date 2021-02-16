@@ -1,8 +1,8 @@
 # project_mvn
 
 ### Cosa e' Maven
-In sintesi Maven è un strumento che permette la *gestione delle dipendenze* e il *build automation* per i progetti Java.
-Maven è anche un insieme di standard applicate e una struttura di repository che serve per lo sviluppo. 
+In sintesi Maven e' un strumento che permette la *gestione delle dipendenze* e il *build automation* per i progetti Java.
+Maven e' anche un insieme di standard applicate e una struttura di repository che serve per lo sviluppo. 
 In altre parole Maven e':
 
 - Gestione delle dipendenze
@@ -31,7 +31,8 @@ In altre parole Maven e':
 ```
 
 ### Struttura del progetto nel filesystem
-La struttura di un progetto semplice Maven è la seguente.
+La struttura di un progetto semplice Maven e' la seguente.
+
 ```
 my-app
 |-- pom.xml
@@ -48,12 +49,12 @@ my-app
                 -- mycompany
                     -- myapp
                         -- AppTest.java
-```                 
-       
+```
+                       
 * `src` struttura standard per un progetto Java.
 * `main` codice sorgente del progetto.
 * `test` codice sorgente dei test d’unità.
-* `pom.xml` il cuore del progetto com tutte le nostre configurazioni.
+* `pom.xml` il cuore del progetto con tutte le nostre configurazioni.
                  
  
 ### Maven come build automation tool
@@ -70,11 +71,11 @@ Maven non e' altro che un esecutore di plug-in, alcuni presenti di default e alt
 
 ### I Goals
 Un `goal` e' lo specifico compito eseguito da un determinato plug-in. 
-Tra i vari `goals` quelli piu' importanti per il ciclo di vita del sviluppo sono:
+Tra i vari `goals` quelli piu' importanti per il ciclo di vita dello sviluppo sono:
 - `compile` compila i sorgenti del progetto.
 - `test` esegue i file test compilati usando uno specificabile framework per i test.
 - `package` prende i file compilati ed esegue il package in un file JAR (o war,..ecc).
-- `install` installare il package nel repository locale, da utilizzare come dipendenza in altri progetti in locale.
+- `install` installa il package nel repository locale, da utilizzare come dipendenza in altri progetti in locale.
 - `deploy` copia il pacchetto finale nel repository remoto per condividerlo con altri sviluppatori e progetti. 
 - `clean` ripulisce gli artifact creati nelle precedenti esecuzioni.
 
@@ -82,7 +83,7 @@ I `goal` possono essere eseguiti in catena, esempio:
 - `mn clean install`
 
 ### Installazione Maven 
-Installando Maven, significa estrare il file `.zip` nel filesystem. La struttura di Maven è la seguente:
+Installando Maven, significa estrare il file `.zip` nel filesystem. La struttura di Maven e' la seguente:
 
 ```
 MAVEN_HOME
@@ -102,17 +103,19 @@ MAVEN_HOME
 #### Maven settings.xml
 La configurazione del Maven viene fatta nel file `settings.xml` si possono configurare il repository locale, i repository remoti, proxy, servers, mirrors, etc.
 Per default il pecorso del repository locale si trova in `C:\Users\nome_utente\.m2\repository`, ma si può cambiare nell' elemento `<localRepository>`
+
 ```
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
   
   <localRepository>C:/Users/nome_utente/.m2/repository</localRepository>
- ``` 
-
+ ```
+ 
 #### Eseguire Maven dalla linea di commando
 Per poter eseguire Maven dalla linea di commando bisogna aggiungere la cartella `/bin` alla *variabile di sistema* `PATH`. 
-Esempio: 
+Esempio:
+ 
 ```
 set MAVEN_HOME="c:/programs files/apache-maven-3.x.y"
 set PATH=%MAVEN_HOME%/bin;%PATH%
@@ -125,7 +128,7 @@ Oppure usando il `SYSTEM VARIABLES` del sistema operativo.
 - `mvn clean` - Cancella la cartella `target`
 - `mvn compile` - Legge dal `pom.xml` le `dependencies` dichiarate e cerca di recuperarle prima dal repository locale. 
 Se i `jar` richiesti non sono presenti localmente, Maven si collega al repository centrale sul web, e scarica i pacchetti nel repository locale.
-Poi compila i sorgenti creando una cartella `target` dove mette le i file `.class` generati.
+Poi compila i sorgenti creando una cartella `target` dove mette i file `.class` generati.
 - `mvn package` - Partendo dai file binari generati nel goal `compile` impachetta e crea un file `jar` o `war` che lo mette prima dentro la cartella `target`
 - `mvn install` - Copia dalla cartella target il `jar` o `war` creato nel goal `package` e lo mette nel repository locale, precisamente nel percorso:
 `C:/Users/nome_utente/.m2/repository/com/mycompany/my-app/1.0.0/my-app-1.0.0.jar`
