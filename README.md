@@ -122,6 +122,19 @@ set PATH=%MAVEN_HOME%/bin;%PATH%
 ```
 Oppure usando il `SYSTEM VARIABLES` del sistema operativo.
 
+Aprire una `propt di commandi` e provare
+```
+mvn -v
+```
+Sulla console dovresti vedere
+```
+C:\>mvn -v
+Apache Maven 3.6.1 (d66c9c0b3152b2e69ee9bac180bb8fcc8e6af555; 2019-04-04T21:00:29+02:00)
+Maven home: C:\Program Files\apache-maven-3.6.1\bin\..
+Java version: 1.8.0_261, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk1.8.0_261\jre
+Default locale: it_IT, platform encoding: Cp1252
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+```
 
 ### Installare un progetto al Repository Locale
 
@@ -146,6 +159,6 @@ Perche':
 
 
 ### See
-* [Maven sito ufficiale](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) - Come si installa Maven e come potrebbe essere un primo progetto 
-* [Cosa e' Maven - Stackoverflow](https://stackoverflow.com/questions/13335351/what-does-maven-do-in-theory-and-in-practice-when-is-it-worth-to-use-it) - Descrizione di Maven in teoria e in pratica
-* [Goals in Maven](https://www.baeldung.com/maven-goals-phases) - Descrizione dei goals di default di Maven
+* [Sito ufficiale Maven](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
+* [Cosa e' Maven - Stackoverflow](https://stackoverflow.com/questions/13335351/what-does-maven-do-in-theory-and-in-practice-when-is-it-worth-to-use-it)
+* [Goals in Maven](https://www.baeldung.com/maven-goals-phases)
