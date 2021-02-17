@@ -80,10 +80,10 @@ Tra i vari `goals` quelli piu' importanti per il ciclo di vita dello sviluppo so
 - `clean` ripulisce gli artifact creati nelle precedenti esecuzioni.
 
 I `goal` possono essere eseguiti in catena, esempio:
-- `mn clean install`
+- `mvn clean install`
 
 ### Installazione Maven 
-Installando Maven, significa estrare il file `.zip` nel filesystem. La struttura di Maven e' la seguente:
+Installare Maven significa estrarre il file `.zip` nel filesystem. La struttura di Maven sara' la seguente:
 
 ```
 MAVEN_HOME
